@@ -15,7 +15,7 @@ Durante o desenvolvimento deste projeto, apliquei conceitos avançados de engenh
 * **Eficiência com Esquemas de Cenário:** Utilizei `Esquema do Cenário` para validar múltiplos campos e regras de negócio. Isso permite testar diversas variações de massa de dados (como campos vazios, e-mails inválidos e registros duplicados) de forma centralizada. **Classes de Equivalência em Senhas:** Em vez de tentar mapear infinitas combinações de senhas erradas, selecionei casos representativos (senhas curtas, senhas com caracteres diferentes) para validar se a lógica de rejeição do sistema está funcionando corretamente.
 **Tags Estratégicas (`@`):** Implementei um sistema de etiquetas para permitir execuções seletivas e organizadas na suíte de testes:
 
-    * `@fluxo_principal`: Identifica os testes críticos e caminhos felizes (Happy Path).
+    * `@fluxo_principal`: Identifica os testes críticos e caminhos felizes.
     * `@negativo`: Agrupa testes que validam o tratamento de erros e mensagens de alerta.
     * `@regra_de_negocio`: Marca cenários que validam comportamentos específicos de domínio do sistema.
 * **Escrita Declarativa:** Os passos foram escritos focando no *comportamento* do usuário e nos resultados esperados, evitando descrições exaustivas, o que torna os testes menos sensíveis a mudanças cosméticas de UI.
@@ -27,7 +27,7 @@ Durante o desenvolvimento deste projeto, apliquei conceitos avançados de engenh
 * **Linguagem:** Gherkin (Cucumber)
 * **Idioma:** Português (`#language: pt`)
 * **Padrões de Escrita:** Uso de `Contexto`, `Cenário` e `Esquema do Cenário`.
-* **Convenção de Variáveis:** Uso de *snake_case* (ex: `<mensagem_de_erro>`) para garantir compatibilidade total com frameworks de automação como Cypress, Selenium e Playwright.
+* **Convenção de Variáveis:** Adotei o padrão *snake_case* (ex: `<mensagem_de_erro>`) para nomear as variáveis nos Esquemas de Cenário. Fiz essa escolha para garantir que os testes sejam facilmente integrados a frameworks como Cypress ou Selenium, evitando erros de leitura de parâmetros.
 * **Análise de Dados:** Aplicação de conceitos de Classes de Equivalência e Particionamento de Dados nas tabelas de `Exemplos`.
 
 ---
