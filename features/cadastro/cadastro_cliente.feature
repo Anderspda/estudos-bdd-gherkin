@@ -8,25 +8,27 @@
             Dado que o usuário está na página de cadastro de cliente
 
             #cenario feliz
-
+            
+            @fluxo_principal @sucesso
             Cenário: Cadastro de cliente com dados válidos
             Quando o usuário preenche os campos obrigatórios com dados válidos
             E clica no botão "Cadastrar"
             Então o cliente é cadastrado com sucesso
 
             #esquemas de cenários
-
-            Esquema do cenário: Cadastro de cliente com dados inválidos
-            Quando o usuário preenche os "<campo>" com "<valor>"
-            E clica no botão "Cadastrar"
-            Então deve ser exibida a mensagem de erro "<mensagem de erro>"
+            
+            @negativo @validacao_campos
+            Esquema do cenário: Validar mensagens de erro para cada campo obrigatório
+            Quando o usuário preenche o campo "<campo>" com o valor "<valor>"
+            Então deve ser exibida a mensagem de erro "<mensagem_de_erro>"
 
             Exemplos:
-            | campo | valor    | mensagem de erro      |
+            | campo | valor    | mensagem_de_erro      |
             | nome  |          | O nome é obrigatório  |
             | email |          | O email é obrigatório |
             | email | invalido | O email é inválido    |
-
+            
+            @negativo @regra_de_negocio
             Esquema do cenário: Cadastro de cliente com email já cadastrado
             Quando o usuário preenche os campos obrigatórios com dados válidos
             E informa o e-mail "<email_existente>"

@@ -19,16 +19,18 @@ Durante o desenvolvimento deste projeto, algumas escolhas estratégicas foram fe
 
 ## 🛠️ Tecnologias e Conceitos Aplicados
 
-* **Linguagem:** Gherkin (Cucumber)
-* **Idioma:** Português (`#language: pt`)
+* **Linguagem:** Gherkin (Cucumber).
+* **Idioma:** Português (`#language: pt`).
 * **Padrões de Escrita:** Uso de `Contexto`, `Cenário` e `Esquema do Cenário`.
-* **Editor:** VS Code (com extensões para suporte a Gherkin).
+* **Análise de Dados:** Aplicação de Classes de Equivalência e Particionamento de Dados nas tabelas de Exemplos.
 
 ---
 
 ## 📂 Estrutura do Projeto
 
-```text
 ├── features/
-│   └── login.feature    # Cenários de teste para a funcionalidade de Login
-└── README.md            # Documentação do projeto e decisões estratégicas
+│   ├── autenticacao/
+│   │   └── login.feature      # Validação de acesso e múltiplos perfis
+│   └── clientes/
+│       └── cadastro.feature   # Regras de negócio complexas e validação de campos
+└── README.md                  # Documentação estratégica
