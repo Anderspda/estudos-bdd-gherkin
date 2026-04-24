@@ -6,7 +6,7 @@
             Para visualizar minhas notas
 
             Contexto:
-            Dado que eu acesse a página de autenticação do portal EBAC
+            Dado que eu acesse a página de autenticação do portal QABC
             
             #cenario feliz
 
